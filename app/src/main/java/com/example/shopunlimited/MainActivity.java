@@ -22,7 +22,7 @@ private Animation slideAnim;
         slideAnim= AnimationUtils.loadAnimation(this,R.anim.slide_animation);
         pic.setAnimation(slideAnim);
 
-        new Handler().postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {//
             @Override
             public void run() {
                 Toast.makeText(MainActivity.this, "Animation Completed", Toast.LENGTH_SHORT).show();

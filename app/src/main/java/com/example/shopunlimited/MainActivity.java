@@ -28,6 +28,5 @@ private Animation slideAnim;
                 Toast.makeText(MainActivity.this, "Animation Completed", Toast.LENGTH_SHORT).show();
             }
         },SCREEN_TIME);
-
     }
 }

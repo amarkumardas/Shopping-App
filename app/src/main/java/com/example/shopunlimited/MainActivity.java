@@ -2,6 +2,7 @@ package com.example.shopunlimited;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -22,10 +23,12 @@ private Animation slideAnim;
         slideAnim= AnimationUtils.loadAnimation(this,R.anim.slide_animation);
         pic.setAnimation(slideAnim);
 
-        new Handler().postDelayed(new Runnable() {//
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(MainActivity.this, "Animation Completed", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();//restrict to come back
             }
         },SCREEN_TIME);
     }

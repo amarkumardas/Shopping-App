@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".SigninActivity"
     android:orientation="vertical">
 
     <TextView
@@ -57,7 +57,7 @@
         android:layout_marginTop="25dp"
         android:layout_gravity="end"
         android:layout_marginRight="20dp"
-        android:text="Login"
+        android:text="Signin"
         android:textAllCaps="false"
         android:textSize="20dp"
         android:background="@drawable/signin_button"/>
@@ -68,6 +68,7 @@
         android:text="Don't have account? Signup Now"
         android:textAlignment="center"
         android:layout_marginTop="85dp"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:onClick="openSignup"/>
 
 </LinearLayout>

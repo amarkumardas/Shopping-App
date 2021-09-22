@@ -11,14 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class SigninActivity extends AppCompatActivity {
      EditText mobileEd,passwordEd;
      Button loginBtn;
      TextView signupTxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signin);
 
         mobileEd=findViewById(R.id.mobile_ed);
         passwordEd=findViewById(R.id.password_ed);
@@ -35,27 +35,24 @@ public class LoginActivity extends AppCompatActivity {
                         if(user.equals("Amar")){
 
                             if(userPassword.equals("123"))
-                                Toast.makeText(LoginActivity.this, "Login SUCCESS", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SigninActivity.this, "Login SUCCESS", Toast.LENGTH_SHORT).show();
                             else
-                                Toast.makeText(LoginActivity.this, "Please enter valid password", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SigninActivity.this, "Please enter valid password", Toast.LENGTH_SHORT).show();
 
                         }else
-                            Toast.makeText(LoginActivity.this, "Username not found", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SigninActivity.this, "Username not found", Toast.LENGTH_SHORT).show();
 
                     }else
-                        Toast.makeText(LoginActivity.this, "Please enter Password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SigninActivity.this, "Please enter Password", Toast.LENGTH_SHORT).show();
 
                 }else
-                    Toast.makeText(LoginActivity.this, "Please enter Username", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SigninActivity.this, "Please enter Username", Toast.LENGTH_SHORT).show();
             }
         });
+    }
 
-        signupTxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(LoginActivity.this,SignupActivity.class);
-                startActivity(intent);
-            }
-        });
+    public void openSignup(View view) {
+        Intent intent=new Intent(SigninActivity.this,SignupActivity.class);
+        startActivity(intent);
     }
 }
